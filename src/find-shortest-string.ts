@@ -7,16 +7,18 @@
  * @param {string[]} stringArr - array of strings
  * @returns {string} - the shortest string
  */
-function findShortestString(stringArr) {
-  const shortestString = stringArr[0];
-  for (let str of stringArr) {
+function findShortestString(stringArr: string[]) {
+  let shortestString = stringArr[0];
+  for (const str of stringArr) {
     if (str.length < shortestString.length) {
       shortestString = str;
     }
   }
-  return shortestString.length;
+  return shortestString;
 }
 
 console.log(findShortestString(["it", "is", "a", "nice", "day"]), "a");
 console.log(findShortestString(["why", "hello", "to", "you"]), "to");
 console.log(findShortestString(["brave", "dance"]), "brave");
+
+export default findLongestString;

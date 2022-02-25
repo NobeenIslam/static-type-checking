@@ -1,4 +1,4 @@
-const findShortestString = require("./find-shortest-string");
+import findShortestString from "./find-shortest-string";
 
 test("findShortestString finds the shortest string in an array", () => {
   expect(findShortestString(["it", "isss", "app", "nice", "day"])).toBe("it");
